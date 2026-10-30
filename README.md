@@ -33,7 +33,7 @@ Desenvolvida sob demanda para a **Gemba Consultoria**
   - [2. Prova final e certificado em PDF com validação pública](#2-prova-final-e-certificado-em-pdf-com-validação-pública)
   - [3. Autenticação e recuperação de conta](#3-autenticação-e-recuperação-de-conta)
   - [4. Cupons e catálogo](#4-cupons-e-catálogo)
-- [Interface](#interface)
+- [Telas](#telas)
 - [Rotas da API](#rotas-da-api)
 - [Aprendizados](#aprendizados)
 
@@ -151,16 +151,50 @@ sequenceDiagram
 
 ---
 
-## Interface
+## Telas
 
-Pensada para conversão e totalmente responsiva: carrosséis de cursos, destaques por área e seções institucionais.
+> Prints tirados rodando o projeto localmente (outubro de 2026), com um banco MongoDB temporário e dados de exemplo: cursos, aluna e apostila são fictícios.
 
-<img width="1859" height="900" alt="Home no desktop" src="https://github.com/user-attachments/assets/041b7a54-80f8-4b18-b007-bea67babe410" />
+**Página inicial**
+
+<img src="docs/home.jpg" alt="Página inicial" width="100%" />
+
+**Catálogo com busca**
+
+<img src="docs/catalogo.jpg" alt="Catálogo de cursos com busca" width="100%" />
+
+**Página do curso, com cupom e inscrição**
+
+<img src="docs/curso.jpg" alt="Página do curso" width="100%" />
+
+**Área do aluno**
+
+<img src="docs/area-do-aluno.jpg" alt="Área do aluno com os cursos comprados" width="100%" />
+
+**Conteúdo do curso: apostila em PDF, materiais e regras do certificado**
+
+<img src="docs/conteudo-do-curso.jpg" alt="Conteúdo do curso" width="100%" />
+
+**Prova final**
+
+<img src="docs/prova-final.jpg" alt="Prova final do curso" width="100%" />
+
+**No celular**
 
 <p align="center">
-  <img width="300" alt="Home no celular" src="https://github.com/user-attachments/assets/a030b543-0fbf-4521-9cb3-c4035fc432d7" />
-  &nbsp;&nbsp;&nbsp;
-  <img width="300" alt="Curso no celular" src="https://github.com/user-attachments/assets/b346f5d0-b2b5-4a0a-97aa-99a75a5d160c" />
+  <img src="docs/celular-home.jpg" alt="Página inicial no celular" width="260" />
+  &nbsp;&nbsp;
+  <img src="docs/celular-curso.jpg" alt="Página do curso no celular" width="260" />
+</p>
+
+**Em produção** (prints da época em que a plataforma estava no ar):
+
+<img width="1859" height="900" alt="Home em produção" src="https://github.com/user-attachments/assets/041b7a54-80f8-4b18-b007-bea67babe410" />
+
+<p align="center">
+  <img width="260" alt="Home no celular em produção" src="https://github.com/user-attachments/assets/a030b543-0fbf-4521-9cb3-c4035fc432d7" />
+  &nbsp;&nbsp;
+  <img width="260" alt="Curso no celular em produção" src="https://github.com/user-attachments/assets/b346f5d0-b2b5-4a0a-97aa-99a75a5d160c" />
 </p>
 
 ---
