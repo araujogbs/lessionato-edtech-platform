@@ -18,8 +18,10 @@ Desenvolvida sob demanda para a **Gemba Consultoria**
 
 > [!NOTE]
 > **Estudo de caso.** O Lessionato é um sistema comercial e o código-fonte foi vendido junto com o produto, por isso não está publicado aqui. O projeto está **pausado** por decisão do cliente. Este repositório documenta a arquitetura, as regras de negócio e as decisões de engenharia, com as rotas e os fluxos reais do sistema.
+>
+> Os prints foram tirados rodando o projeto localmente (outubro de 2026), com um banco MongoDB temporário e dados de exemplo: cursos, aluna, apostila e certificado são fictícios, e o QR Code do pagamento é ilustrativo.
 
-<img width="1280" height="578" alt="Página inicial da Lessionato" src="https://github.com/user-attachments/assets/3b528afb-7f21-4a18-8320-220d13667dc5" />
+<img src="docs/home.jpg" alt="Página inicial da Lessionato" width="100%" />
 
 ---
 
@@ -47,7 +49,7 @@ A Lessionato vende cursos livres online. O aluno cria a conta, escolhe o curso, 
 
 **Área administrativa:** cadastro de cursos (com o PDF do material) e criação de cupons.
 
-<img width="1280" height="648" alt="Catálogo de cursos" src="https://github.com/user-attachments/assets/542057f8-2c5c-4c3f-9b6c-7fd912d5a0ad" />
+<img src="docs/catalogo.jpg" alt="Catálogo de cursos com busca" width="100%" />
 
 ---
 
@@ -122,7 +124,7 @@ sequenceDiagram
     end
 ```
 
-<img width="1280" height="591" alt="Tela de pagamento PIX" src="https://github.com/user-attachments/assets/541c56cd-fd63-41d2-8393-5b7d955eeee5" />
+<img src="docs/pagamento-pix.jpg" alt="Tela de pagamento PIX (QR Code de exemplo)" width="100%" />
 
 ### 2. Prova final e certificado em PDF com validação pública
 
@@ -132,9 +134,11 @@ sequenceDiagram
 - **Código de autenticidade:** cada certificado recebe um código único (`crypto.randomBytes`), guardado na matrícula, e um **QR Code** desenhado no próprio PDF que leva à página de verificação.
 - **Validação pública:** `GET /api/verificar-autenticidade/:codigo` permite que qualquer pessoa confira se o certificado é verdadeiro.
 
-<img width="1121" height="791" alt="Certificado emitido" src="https://github.com/user-attachments/assets/346b584d-3c3a-475c-9584-955e8bac500d" />
-&nbsp;
-<img width="1117" height="790" alt="Validação pública do certificado" src="https://github.com/user-attachments/assets/39a422cb-f7d0-4ad2-bc18-1c20014237f0" />
+<img src="docs/certificado-frente.jpg" alt="Certificado: frente" width="100%" />
+
+<img src="docs/certificado-verso.jpg" alt="Certificado: verso com dados do aluno, prova e código de autenticidade" width="100%" />
+
+<img src="docs/validacao-certificado.jpg" alt="Validação pública do certificado pelo código" width="100%" />
 
 ### 3. Autenticação e recuperação de conta
 
@@ -152,16 +156,6 @@ sequenceDiagram
 ---
 
 ## Telas
-
-> Prints tirados rodando o projeto localmente (outubro de 2026), com um banco MongoDB temporário e dados de exemplo: cursos, aluna e apostila são fictícios.
-
-**Página inicial**
-
-<img src="docs/home.jpg" alt="Página inicial" width="100%" />
-
-**Catálogo com busca**
-
-<img src="docs/catalogo.jpg" alt="Catálogo de cursos com busca" width="100%" />
 
 **Página do curso, com cupom e inscrição**
 
@@ -185,16 +179,6 @@ sequenceDiagram
   <img src="docs/celular-home.jpg" alt="Página inicial no celular" width="260" />
   &nbsp;&nbsp;
   <img src="docs/celular-curso.jpg" alt="Página do curso no celular" width="260" />
-</p>
-
-**Em produção** (prints da época em que a plataforma estava no ar):
-
-<img width="1859" height="900" alt="Home em produção" src="https://github.com/user-attachments/assets/041b7a54-80f8-4b18-b007-bea67babe410" />
-
-<p align="center">
-  <img width="260" alt="Home no celular em produção" src="https://github.com/user-attachments/assets/a030b543-0fbf-4521-9cb3-c4035fc432d7" />
-  &nbsp;&nbsp;
-  <img width="260" alt="Curso no celular em produção" src="https://github.com/user-attachments/assets/b346f5d0-b2b5-4a0a-97aa-99a75a5d160c" />
 </p>
 
 ---
